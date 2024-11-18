@@ -27,6 +27,11 @@
             height: 500px;
             margin-top: 20px;
         }
+
+        /* Style for GitHub repository link */
+        .github-link {
+            color: #0074D9; /* Blue color for GitHub link */
+        }
     </style>
 </head>
 
@@ -57,22 +62,23 @@
                 </section>
 
                 <section id="gis5571">
-                    <h2>GIS 5571: Intermediate Skills in Spatial Data Science</h2>
+                    <h2>GIS 5571: Intermediate Spatial Data Science Applied with ArcGIS</h2>
                     <p><strong>Course Description:</strong> This course focuses on teaching intermediate skills in spatial data science using the Esri ecosystem of geospatial technologies. Students gain skills to build data integration pipelines and perform reproducible deterministic spatial analyses. The course aims to equip students with the ability to build geospatial workflows and data systems to address intermediate-level spatial analysis problems.</p>
 
                     <section id="lab2">
                         <h3>Selected Labs - Lab 2</h3>
                         <p><strong>Part 1:</strong> This lab involves downloading and converting .las data to create DEM and TIN files, followed by exporting these files as PDFs. The process includes working with various geospatial data formats and performing spatial data transformations.</p>
                         <p><strong>Part 2:</strong> This part of the lab focuses on working with landcover and elevation data. It includes downloading and reclassifying landcover data, calculating slopes, and generating cost surfaces based on weighted combinations of landcover and slope data. The end goal is to create multiple cost surfaces for spatial analysis.</p>
-                        <p><a href="https://github.com/yourusername/lab2-repo" target="_blank">Link to GitHub Repository</a></p>
-                        <img src="assets/lab2_image1.png" alt="Lab 2 Image 1">
-                        <img src="assets/lab2_image2.png" alt="Lab 2 Image 2">
+                        <p><a href="https://github.com/blanders98/GIS5571/tree/main/Lab2" target="_blank" class="github-link">Link to GitHub Repository</a></p>
+                        <img src="assets/Lab2_part2_DFD.png" alt="Lab 2 - Data Flow Diagram">
+                        <img src="assets/Lab2_part2_CostSurface.png" alt="Lab 2 - Cost Surface Output">
                     </section>
                 </section>
 
                 <section id="gis5574">
-                    <h2>GIS 5574: Web GIS Technologies</h2>
+                    <h2>GIS 5574: Web GIS and Services</h2>
                     <p><strong>Course Description:</strong> This course empowers students to plan, design, and publish web-based GIS and mapping solutions. It provides hands-on experience with various Web GIS technologies, from commercial to open source, and covers topics such as cloud service models, online web GIS platforms, web GIS services, web mapping libraries, mapping APIs, and web mapping applications.</p>
+                    <p>This web map was created in ArcGIS Online depicting the USAPL database of competitive lifting results. The web map organizes the results by state, summarizing specific data points.</p>
                     <div class="webmap" id="webmap"></div>
                 </section>
             </div>
