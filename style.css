@@ -31,8 +31,10 @@ body {
 .container {
     position: relative;
     z-index: 1; /* Make sure the content is above the background */
-    padding: 20px;
+    padding: 0 20px; /* Adjust padding for container */
     flex: 1; /* Allow container to grow and take available space */
+    display: flex;
+    flex-direction: column;
 }
 
 /* White box styling */
@@ -41,8 +43,11 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Extend the white box to full width */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    width: calc(100% - 40px); /* Adjust width for full width minus padding */
+    margin: 20px auto; /* Center the white box horizontally */
+    flex: 1; /* Allow white box to grow and take available space */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header and Navigation */
@@ -82,6 +87,7 @@ a:hover {
 /* Main content area */
 section {
     text-align: center; /* Center text in sections */
+    flex: 1; /* Allow sections to grow and take available space */
 }
 
 article h3 {
@@ -107,6 +113,7 @@ footer {
     width: 100%;
     position: relative; /* Ensure footer is positioned correctly */
     bottom: 0;
+    flex-shrink: 0; /* Prevent footer from shrinking */
 }
 
 /* Responsive layout for smaller screens */
