@@ -48,6 +48,21 @@ body {
     flex: 1; /* Allow white box to grow and take available space */
     display: flex;
     flex-direction: column;
+    text-align: center; /* Center all text */
+    max-width: 800px; /* Limit the max-width to create margins */
+}
+
+/* Core Proficiencies styling */
+ul.core-proficiencies {
+    list-style-type: disc;
+    padding-left: 0; /* Remove default padding */
+    text-align: left;
+    column-count: 2; /* Split into two columns */
+    column-gap: 20px; /* Add some space between columns */
+}
+
+ul.core-proficiencies li {
+    padding-left: 10px; /* Add padding to the left for bullets */
 }
 
 /* Header and Navigation */
