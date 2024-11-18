@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    text-align: center; /* Center all text in the body */
 }
 
 /* OpenStreetMap background styling */
@@ -26,9 +27,11 @@ body {
 /* Header and Navigation */
 header {
     background-color: #333;
-    color: white;
+    color: white; /* Ensure text is white on a dark background */
     padding: 10px;
     text-align: center; /* Center the text */
+    z-index: 2; /* Ensure header is above other content */
+    position: relative;
 }
 
 header h1 {
@@ -47,7 +50,7 @@ nav ul li {
 }
 
 a {
-    color: #333;
+    color: white; /* Ensure links are visible on dark background */
     text-decoration: none;
 }
 
@@ -63,24 +66,28 @@ section.content {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text in sections */
 }
 
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
     color: #333;
+    text-align: center; /* Center text in headings */
 }
 
 h2 {
     font-size: 1.5em;
     margin-top: 20px;
     color: #555;
+    text-align: center; /* Center text in headings */
 }
 
 p {
     font-size: 1em;
     line-height: 1.6;
     color: #666;
+    text-align: center; /* Center text in paragraphs */
 }
 
 /* Footer Styling */

@@ -1,16 +1,18 @@
-<!-- graduate_work.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graduate Work - Ben Landers Portfolio</title>
+    <title>Graduate Work</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
+    <div id="map"></div>
+    
     <div class="container">
         <header>
-            <h1>Ben Landers Portfolio</h1>
+            <h1>Graduate Work</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -20,22 +22,22 @@
                 </ul>
             </nav>
         </header>
-
-        <section id="graduate_work">
-            <h2>Graduate Work</h2>
-            <article>
-                <h3>Example Project 1: Class Work</h3>
-                <p><strong>Overview:</strong> This project was completed during my graduate studies. It involved...</p>
-                <a href="https://github.com/yourusername/repository-name" target="_blank">Link to GitHub Repository</a>
-                <br>
-                <img src="assets/map1.png" alt="Project Map 1">
-            </article>
+        
+        <section>
+            <h2>Example Project 1: Class Work</h2>
+            <p><strong>Overview:</strong> This project was completed during my graduate studies. It involved...</p>
+            <a href="https://github.com/yourusername/repository-name" target="_blank">Link to GitHub Repository</a>
+            <br>
+            <img src="assets/map1.png" alt="Project Map 1">
             <!-- Add more projects as needed -->
         </section>
-
+        
         <footer>
             <p>Contact: benlanders417@gmail.com</p>
         </footer>
     </div>
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
