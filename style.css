@@ -6,12 +6,25 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Container to add padding/margin to the left and right */
-.container {
+/* OpenStreetMap background styling */
+.osm-background {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 1200px; /* Set max-width to control how wide the content can go */
-    margin: 0 auto; /* Center the content horizontally */
-    padding: 0 20px; /* Add padding on left and right */
+    height: 100vh;  /* Full viewport height */
+    background-image: url('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;  /* Ensure the background is behind the content */
+    opacity: 0.5;  /* Make the background semi-transparent */
+}
+
+/* Container that holds all content */
+.container {
+    position: relative;
+    z-index: 1; /* Make sure the content is above the background */
+    padding: 20px;
 }
 
 /* Header and Navigation */
@@ -48,52 +61,29 @@ a:hover {
 /* Main content area */
 section.content {
     margin: 40px auto;
-    max-width: 1200px; /* Limit the width of the content */
+    max-width: 1200px;
     background-color: white;
     padding: 20px;
-    border-radius: 8px; /* Rounded corners for aesthetics */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #333; /* Dark text for main headings */
+    color: #333;
 }
 
 h2 {
     font-size: 1.5em;
     margin-top: 20px;
-    color: #555; /* Slightly lighter color for subheadings */
+    color: #555;
 }
 
 p {
     font-size: 1em;
     line-height: 1.6;
     color: #666;
-}
-
-/* Styling for each project and experience section */
-.project, .experience {
-    margin-bottom: 30px;
-    padding: 20px;
-    border-left: 4px solid #333; /* Left border for a nice divider effect */
-    background-color: #f9f9f9; /* Light background for each project/experience */
-    border-radius: 8px;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-}
-
-.project:hover, .experience:hover {
-    background-color: #e9ecef; /* Slight color change on hover */
-}
-
-.project a, .experience a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.project a:hover, .experience a:hover {
-    text-decoration: underline;
 }
 
 /* Footer Styling */
@@ -113,10 +103,6 @@ footer {
         display: block;
         text-align: center;
         margin-bottom: 10px;
-    }
-
-    .project, .experience {
-        padding: 15px;
     }
 
     footer {
