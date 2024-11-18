@@ -6,7 +6,7 @@
     <title>Graduate Work</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://js.arcgis.com/4.18/"></script>
     <style>
         .white-box {
@@ -34,16 +34,11 @@
         .github-link {
             color: #0074D9; /* Blue color for GitHub link */
         }
-
-        /* Ensure the OpenStreetMap background has height */
-        #map {
-            height: 100vh;
-        }
     </style>
 </head>
 
 <body>
-    <div id="map"></div>
+    <div id="map" style="height: 100vh;"></div>
 
     <div class="content-wrapper">
         <header>
@@ -103,42 +98,6 @@
     </div>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            initializeMaps();
-        });
-
-        function initializeMaps() {
-            const pageUrl = window.location.pathname;
-
-            let mapCenter;
-            if (pageUrl.includes('professional_experience.html')) {
-                mapCenter = [38.0293, -78.4767]; // Coordinates for Charlottesville, Virginia
-            } else {
-                mapCenter = [44.9778, -93.2650]; // Coordinates for Minneapolis, Minnesota
-            }
-
-            // Initialize the OpenStreetMap
-            const map = L.map('map').setView(mapCenter, 13);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-
-            // Initialize the ArcGIS web map if on graduate_work.html
-            if (pageUrl.includes('graduate_work.html')) {
-                require(["esri/Map", "esri/views/MapView", "esri/WebMap"], function(Map, MapView, WebMap) {
-                    var webmap = new WebMap({
-                        portalItem: { // autocasts as new PortalItem()
-                            id: "02f0b4b239f9432a8bdf6d79a041808f"
-                        }
-                    });
-                    var view = new MapView({
-                        container: "webmap", // Reference to the scene div created in step 3
-                        map: webmap // Reference to the map object created before the scene
-                    });
-                });
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -33,9 +33,7 @@ function initializeWebMap() {
     });
 }
 
-// Ensure the function is called once the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-    if (pageUrl.includes('graduate_work.html')) {
-        initializeWebMap();
-    }
-});
+// Call the function if the current page is graduate_work.html
+if (pageUrl.includes('graduate_work.html')) {
+    initializeWebMap();
+}
