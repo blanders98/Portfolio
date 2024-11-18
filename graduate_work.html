@@ -99,5 +99,12 @@
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (pageUrl.includes('graduate_work.html')) {
+                initializeWebMap();
+            }
+        });
+    </script>
 </body>
 </html>
