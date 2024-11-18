@@ -17,3 +17,23 @@ const map = L.map('map').setView(mapCenter, 13);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
+// Function to initialize the ArcGIS web map in graduate_work.html
+function initializeWebMap() {
+    require(["esri/Map", "esri/views/MapView", "esri/WebMap"], function(Map, MapView, WebMap) {
+        var webmap = new WebMap({
+            portalItem: { // autocasts as new PortalItem()
+                id: "02f0b4b239f9432a8bdf6d79a041808f"
+            }
+        });
+        var view = new MapView({
+            container: "webmap", // Reference to the scene div created in step 3
+            map: webmap // Reference to the map object created before the scene
+        });
+    });
+}
+
+// Call the function if the current page is graduate_work.html
+if (pageUrl.includes('graduate_work.html')) {
+    initializeWebMap();
+}
