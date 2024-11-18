@@ -6,6 +6,14 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Container to add padding/margin to the left and right */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Set max-width to control how wide the content can go */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 0 20px; /* Add padding on left and right */
+}
+
 /* Header and Navigation */
 header {
     background-color: #333;
@@ -110,7 +118,7 @@ footer {
     .project, .experience {
         padding: 15px;
     }
-    
+
     footer {
         position: relative;
     }
