@@ -18,7 +18,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// Function to initialize the ArcGIS web map in graduate_work.html
+// Function to initialize the ArcGIS web map
 function initializeWebMap() {
     require(["esri/Map", "esri/views/MapView", "esri/WebMap"], function(Map, MapView, WebMap) {
         var webmap = new WebMap({
