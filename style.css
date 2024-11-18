@@ -59,6 +59,8 @@ ul.core-proficiencies {
     text-align: left;
     column-count: 2; /* Split into two columns */
     column-gap: 20px; /* Add some space between columns */
+    margin: 0 auto; /* Center the columns */
+    max-width: 400px; /* Limit the width of the columns container */
 }
 
 ul.core-proficiencies li {
