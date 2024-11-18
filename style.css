@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    text-align: center; /* Center all text in the body */
 }
 
 /* OpenStreetMap background styling */
@@ -58,7 +59,7 @@ a:hover {
 }
 
 /* Main content area */
-section.content {
+section {
     margin: 40px auto;
     max-width: 1200px;
     background-color: white;
@@ -68,18 +69,11 @@ section.content {
     text-align: center; /* Center text in sections */
 }
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center; /* Center text in headings */
-}
-
-h2 {
+article h3 {
     font-size: 1.5em;
     margin-top: 20px;
     color: #555;
-    text-align: center; /* Center text in headings */
+    text-align: center; /* Center text in article headings */
 }
 
 p {

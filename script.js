@@ -7,8 +7,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
 }).addTo(map);
 
-// Add a semi-transparent overlay for shading
+// Add a semi-transparent overlay for more shading
 var overlay = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    opacity: 0.3, // Adjust the opacity to make it shaded
+    opacity: 0.1, // Make the shading more significant
     maxZoom: 18,
 }).addTo(map);
