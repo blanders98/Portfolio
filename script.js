@@ -1,14 +1,19 @@
-// Initialize the map and set the view to Minneapolis
-var map = L.map('map').setView([44.9778, -93.2650], 13);
+// Check which page is loaded
+const pageUrl = window.location.pathname;
 
-// Add OpenStreetMap tiles to the map
+let mapCenter;
+
+// Set map center based on the page
+if (pageUrl.includes('professional_experience.html')) {
+    mapCenter = [38.0293, -78.4767]; // Coordinates for Charlottesville, Virginia
+} else {
+    mapCenter = [44.9778, -93.2650]; // Coordinates for Minneapolis, Minnesota
+}
+
+// Initialize the map
+const map = L.map('map').setView(mapCenter, 13);
+
+// Add OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',
-    maxZoom: 18,
-}).addTo(map);
-
-// Add a semi-transparent overlay for more shading
-var overlay = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    opacity: 0.1, // Make the shading more significant
-    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
