@@ -22,21 +22,11 @@
             max-width: 800px; /* Limit the max-width to create margins */
         }
 
-        /* Style for interactive map */
-        .webmap {
-            width: 100%;
-            height: 500px;
-            margin-top: 20px;
-        }
-
         /* Style for GitHub repository link */
         .github-link {
             color: #0074D9; /* Blue color for GitHub link */
         }
     </style>
-    <!-- Include ArcGIS API for JavaScript -->
-     <link rel="stylesheet" href="https://js.arcgis.com/4.23/esri/themes/light/main.css">
-     <script src="https://js.arcgis.com/4.23/"></script>
 </head>
 
 <body>
@@ -89,59 +79,17 @@
                 <section id="gis5574">
                     <h2>GIS 5574: Web GIS and Services</h2>
                     <p><strong>Course Description:</strong> This course empowers students to plan, design, and publish web-based GIS and mapping solutions. It provides hands-on experience with various Web GIS technologies, from commercial to open source, and covers topics such as cloud service models, online web GIS platforms, web GIS services, web mapping libraries, mapping APIs, and web mapping applications.</p>
+                    
                     <!-- New section for ArcGIS Dashboard -->
-                    <h3>ArcGIS Dashboard: Minneapolis Neighborhood Amenities</h3>
+                    <h3>ArcGIS Dashboard: Minneapolis Neighborhoods Amenities</h3>
                     <p>
                         This dashboard provides a comprehensive view of all neighborhoods in Minneapolis and their associated amenities, including bars, restaurants, cafes, arts centers, schools, kindergartens, and community centers. Users can click on a neighborhood to see the amenities within it and click on individual amenity points to learn more about each location. The dashboard allows users to zoom into specific neighborhoods and filter by neighborhood type to explore family-friendly, lively, and quiet areas.
                     </p>
 
-                    <!-- Container for the ArcGIS Dashboard -->
-                    <div id="dashboardContainer" style="width: 100%; height: 500px;"></div>
-
-                    <script>
-                        require([
-                            "esri/config",
-                            "esri/Map",
-                            "esri/views/MapView",
-                            "esri/widgets/Legend",
-                            "esri/widgets/Expand",
-                            "esri/webmap/WebMap"
-                        ], function(esriConfig, Map, MapView, Legend, Expand, WebMap) {
-                            
-                            // Configure the API key or authentication (if needed)
-                            esriConfig.portalUrl = "https://www.arcgis.com"; // or your specific portal URL
-                            // If using API key, uncomment the following line and replace with your actual API key
-                            // esriConfig.apiKey = "YOUR_API_KEY";
-
-                            // Create the WebMap using the provided ID
-                            var webmap = new WebMap({
-                                portalItem: {
-                                    id: "a976920af8094ff3b6b5b01b5c0e880e" // ID of your ArcGIS Dashboard
-                                }
-                            });
-
-                            // Create the MapView and set its container to the dashboardContainer div
-                            var view = new MapView({
-                                container: "dashboardContainer",
-                                map: webmap,
-                                zoom: 10, // Initial zoom level
-                                center: [-93.261718, 44.970831] // Center point [longitude, latitude]
-                            });
-
-                            // Add a legend to the view
-                            var legend = new Legend({
-                                view: view
-                            });
-
-                            // Add the legend to an expandable widget
-                            var legendExpand = new Expand({
-                                view: view,
-                                content: legend
-                            });
-
-                            view.ui.add(legendExpand, "top-right");
-                        });
-                    </script>
+                    <!-- Container for the ArcGIS Dashboard iframe -->
+                    <iframe src="https://umn.maps.arcgis.com/apps/dashboards/a976920af8094ff3b6b5b01b5c0e880e" 
+                            width="100%" height="600px" style="border:none;">
+                    </iframe>
                 </section>
             </div>
         </div>
