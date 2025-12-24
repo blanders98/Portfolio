@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        .white-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: calc(100% - 40px);
+            margin: 20px auto;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            max-width: 900px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <div class="content-wrapper">
+        <header>
+            <h1>Ben Landers Portfolio - Contact</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="graduate_work.html">Projects</a></li>
+                    <li><a href="research_work.html">Research Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="white-box">
+                <section id="contact">
+                    <h2>Let's Connect</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; max-width: 700px; margin: 20px auto 40px;">
+                        Interested in collaborating on geospatial projects, discussing opportunities, or just want to connect?
+                        I'd love to hear from you!
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 30px; align-items: center; margin: 40px 0;">
+                        <!-- Email -->
+                        <div style="background: rgba(74, 139, 166, 0.08); padding: 25px 40px; border-radius: 12px; width: 100%; max-width: 500px; border-left: 4px solid var(--secondary-color);">
+                            <p style="margin: 0; font-size: 0.9rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Email</p>
+                            <p style="margin: 10px 0 0 0; font-size: 1.2rem;">
+                                <a href="mailto:benlanders417@gmail.com" style="color: var(--primary-color); font-weight: 500;">benlanders417@gmail.com</a>
+                            </p>
+                        </div>
+
+                        <!-- LinkedIn -->
+                        <div style="background: rgba(44, 95, 124, 0.08); padding: 25px 40px; border-radius: 12px; width: 100%; max-width: 500px; border-left: 4px solid var(--primary-color);">
+                            <p style="margin: 0; font-size: 0.9rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">LinkedIn</p>
+                            <p style="margin: 10px 0 0 0; font-size: 1.2rem;">
+                                <a href="https://www.linkedin.com/in/ben-l-526415219/" target="_blank" class="linkedin-link" style="color: var(--primary-color); font-weight: 500;">linkedin.com/in/ben-l-526415219</a>
+                            </p>
+                        </div>
+
+                        <!-- Location -->
+                        <div style="background: rgba(124, 179, 66, 0.08); padding: 25px 40px; border-radius: 12px; width: 100%; max-width: 500px; border-left: 4px solid var(--accent-color);">
+                            <p style="margin: 0; font-size: 0.9rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Location</p>
+                            <p style="margin: 10px 0 0 0; font-size: 1.2rem; color: var(--text-dark); font-weight: 500;">
+                                Minneapolis, Minnesota
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 50px; padding: 30px; background: rgba(248, 249, 250, 0.6); border-radius: 10px;">
+                        <h3 style="margin-top: 0; color: var(--primary-color);">What I'm Looking For</h3>
+                        <p style="text-align: left; line-height: 1.8; color: var(--text-dark);">
+                            I'm passionate about leveraging geospatial data science and GIS technologies to solve complex problems across diverse industries.
+                            From spatial data engineering and analytics to application development and location intelligence, I'm excited by opportunities
+                            that involve geospatial data analysis, processing, and management. Whether you're looking for collaboration on a project, have
+                            an opportunity to discuss, or just want to chat about GIS and data science, feel free to reach out!
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <p>Contact: benlanders417@gmail.com</p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

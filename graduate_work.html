@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graduate Work</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <style>
         .white-box {
             background-color: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 40px;
+            border-radius: 12px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: calc(100% - 40px); /* Adjust width for full width minus padding */
-            margin: 20px auto; /* Center the white box horizontally */
-            flex: 1; /* Allow white box to grow and take available space */
+            width: calc(100% - 40px);
+            margin: 20px auto;
+            flex: 1;
             display: flex;
             flex-direction: column;
-            text-align: center; /* Center all text */
-            max-width: 800px; /* Limit the max-width to create margins */
+            text-align: center;
+            max-width: 900px;
         }
 
         /* Style for GitHub repository link */
@@ -34,63 +33,165 @@
 
     <div class="content-wrapper">
         <header>
-            <h1>Ben Landers Portfolio - Graduate Work</h1>
+            <h1>Ben Landers Portfolio - Projects</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="resume.html">Resume</a></li>
-                    <li><a href="graduate_work.html">Graduate Class Work</a></li>
+                    <li><a href="graduate_work.html">Projects</a></li>
                     <li><a href="research_work.html">Research Work</a></li>
-                    <li><a href="professional_experience.html">Professional Experience</a></li>
-                    <li><a href="about.html">About this Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
         <div class="container"> <!-- Wrap everything in a container -->
             <div class="white-box">
-                <section id="graduate_work">
-                    <h2>MGIS Class Work</h2>
-                    <article>
-                        <p><strong>Overview:</strong> Selected classes, labs, and projects from my time in the MGIS program at the University of Minnesota.</p>
-                    </article>
-                </section>
-
-                <section id="gis5571">
-                    <h2>GIS 5571: Intermediate Spatial Data Science Applied with ArcGIS</h2>
-                    <p><strong>Course Description:</strong> This course focuses on teaching intermediate skills in spatial data science using the Esri ecosystem of geospatial technologies. Students gain skills to build data integration pipelines and perform reproducible deterministic spatial analyses. The course aims to equip students with the ability to build geospatial workflows and data systems to address intermediate-level spatial analysis problems.</p>
-
-                    <section id="lab2">
-                        <h3>Selected Labs - Lab 2</h3>
-                        <p><strong>Part 1:</strong> This lab involves downloading and converting .las data to create DEM and TIN files, followed by exporting these files as PDFs. The process includes working with various geospatial data formats and performing spatial data transformations.</p>
-                        <p><strong>Part 2:</strong> This part of the lab focuses on working with landcover and elevation data. It includes downloading and reclassifying landcover data, calculating slopes, and generating cost surfaces based on weighted combinations of landcover and slope data. The end goal is to create multiple cost surfaces for spatial analysis.</p>
-                        <p><a href="https://github.com/blanders98/GIS5571/tree/main/Lab2" target="_blank" class="github-link">Link to GitHub Repository</a></p>
-                        <figure>
-                            <img src="assets/Lab2_part2_DFD.png" alt="Lab 2 - Data Flow Diagram">
-                            <figcaption>Figure 1: Data Flow Diagram for Lab 2 - Part 2</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="assets/Lab2_part2_CostSurface.png" alt="Lab 2 - Cost Surface Output">
-                            <figcaption>Figure 2: Cost Surface Output for Lab 2 - Part 2</figcaption>
-                        </figure>
-                    </section>
-                </section>
-
-                <section id="gis5574">
-                    <h2>GIS 5574: Web GIS and Services</h2>
-                    <p><strong>Course Description:</strong> This course empowers students to plan, design, and publish web-based GIS and mapping solutions. It provides hands-on experience with various Web GIS technologies, from commercial to open source, and covers topics such as cloud service models, online web GIS platforms, web GIS services, web mapping libraries, mapping APIs, and web mapping applications.</p>
-                    
-                    <!-- New section for ArcGIS Dashboard -->
-                    <h3>ArcGIS Dashboard: Minneapolis Neighborhoods Amenities</h3>
-                    <p>
-                        This dashboard provides a comprehensive view of all neighborhoods in Minneapolis and their associated amenities, including bars, restaurants, cafes, arts centers, schools, kindergartens, and community centers. Users can click on a neighborhood to see the amenities within it and click on individual amenity points to learn more about each location. The dashboard allows users to zoom into specific neighborhoods and filter by neighborhood type to explore family-friendly, lively, and quiet areas.
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; max-width: 800px; margin: 20px auto 40px;">
+                        A showcase of geospatial data science and software development projects demonstrating expertise in spatial analysis, web development, and systems programming.
                     </p>
-
-                    <!-- Container for the ArcGIS Dashboard iframe -->
-                    <iframe src="https://umn.maps.arcgis.com/apps/dashboards/a976920af8094ff3b6b5b01b5c0e880e" 
-                            width="100%" height="600px" style="border:none;">
-                    </iframe>
                 </section>
+
+                <article>
+                        <h3>Heat Risk Assessment Agent Based Model</h3>
+                        <p><strong>Project Overview:</strong></p>
+                        <p>Developed a comprehensive heat risk assessment model to identify vulnerable populations and high-risk areas for heat-related health issues.</p>
+
+                        <p><strong>Technical Implementation:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Language:</strong> Python</li>
+                            <li><strong>Key Libraries:</strong> GeoPandas, Pandas, NumPy, spatial analysis libraries</li>
+                            <li><strong>Database:</strong> SQL for data management</li>
+                            <li><strong>Visualization:</strong> Interactive maps and dashboards in ArcGIS</li>
+                        </ul>
+
+                        <p><strong>Project Components:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Data Cleaning:</strong> Processed and standardized datasets from multiple sources</li>
+                            <li><strong>QAQC:</strong> Validated data accuracy and completeness</li>
+                            <li><strong>Model Development:</strong> Built risk assessment model combining environmental and demographic factors</li>
+                            <li><strong>Visualization:</strong> Created compelling visualizations to communicate heat risk findings</li>
+                            <li><strong>SQL Integration:</strong> Implemented SQL database for efficient data storage and querying</li>
+                        </ul>
+
+                        <p><strong>Key Skills Demonstrated:</strong> Multi-source data integration, spatial modeling and analysis, team collaboration on complex geospatial project, database design and management, scientific communication</p>
+                </article>
+
+                <article>
+                        <h3>Suitable - Suitability Analysis Web Application</h3>
+                        <p><strong>Project Overview:</strong></p>
+                        <p>Developed Suitable, an interactive web application that allows users to perform multi-criteria suitability analysis on their own geospatial datasets through an intuitive interface, without requiring GIS expertise or coding knowledge.</p>
+
+                        <p><strong>Technical Implementation:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Framework:</strong> Streamlit (Python web framework)</li>
+                            <li><strong>Key Libraries:</strong> GeoPandas, Pandas, NumPy, Folium (Leaflet.js wrapper), Streamlit-Folium</li>
+                            <li><strong>Architecture:</strong> Object-oriented design with modular components</li>
+                        </ul>
+
+                        <p><strong>Application Components:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Models:</strong> Project class (manages overall analysis project state), Criterion class (represents individual suitability criteria)</li>
+                            <li><strong>Components:</strong> DataLoader (handles uploading and processing of geospatial files), SuitabilityAnalyzer (performs multi-criteria analysis), ResultsExporter (exports analysis results to various formats)</li>
+                            <li><strong>Utilities:</strong> file_utils (file validation and geodataframe handling), map_utils (interactive map display and layer management), boundary_utils (study area boundary processing)</li>
+                        </ul>
+
+                        <p><strong>Key Features:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li>File Upload support for shapefiles, GeoJSON, and other vector formats</li>
+                            <li>Custom study area boundary definition</li>
+                            <li>Criterion Builder to add multiple criteria, define scoring methods, and assign weights</li>
+                            <li>Interactive Map with real-time visualization of input datasets and results</li>
+                            <li>Results Export to shapefiles or GeoJSON</li>
+                            <li>Session Management to save and restore project state</li>
+                        </ul>
+
+                        <p><strong>Key Skills Demonstrated:</strong> Full-stack web development with Streamlit, object-oriented programming in Python, interactive web mapping with Folium, user experience (UX) design, software architecture and modular design, geospatial data processing and analysis</p>
+                </article>
+
+                <article>
+                        <h3>GeoChat - Conversational GIS Interface</h3>
+                        <p><strong>Project Overview:</strong></p>
+                        <p>Created GeoChat, a Jupyter notebook-based application providing a natural language interface for geospatial data interaction. Users can perform common GIS operations through conversational commands rather than specialized syntax.</p>
+
+                        <p><strong>Technical Implementation:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Platform:</strong> Jupyter Notebook</li>
+                            <li><strong>Key Libraries:</strong> GeoPandas, Folium, ipywidgets, Shapely, Pandas, NumPy, Matplotlib, Requests</li>
+                            <li><strong>APIs:</strong> OpenStreetMap (Nominatim), Overpass API, OSRM (Open Source Routing Machine)</li>
+                        </ul>
+
+                        <p><strong>Core Capabilities:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Data Management:</strong> Load existing files, download files from web URLs, list available datasets</li>
+                            <li><strong>Location-Based Features:</strong> Navigate to locations with natural language, find points of interest near locations</li>
+                            <li><strong>Spatial Analysis:</strong> Create buffers around features, calculate areas of geographic regions, measure distances between locations, get driving directions</li>
+                            <li><strong>Visualization:</strong> Interactive map display with automatic updates, points of interest mapping with appropriate icons, route visualization for driving directions</li>
+                        </ul>
+
+                        <p><strong>Example Commands:</strong> "go to New York City", "show parks", "calculate area", "buffer by 5 km", "measure distance from Denver to Seattle", "show route from Miami to Orlando"</p>
+
+                        <p><strong>Key Skills Demonstrated:</strong> Natural language processing (pattern matching, intent recognition), API integration (OpenStreetMap, Overpass, OSRM), interactive widget development with ipywidgets, user interface design for non-technical users, geospatial analysis automation, making GIS accessible to broader audiences</p>
+                </article>
+
+                <article>
+                        <h3>SynerGIS - Parallel Spatial Join Library (Rust)</h3>
+                        <p><strong>Project Overview:</strong></p>
+                        <p>Developed SynerGIS, a high-performance Rust library for parallel spatial join operations, designed to be called from Python. The project demonstrates performance optimization through parallelization and low-level systems programming.</p>
+
+                        <p><strong>Technical Implementation:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Language:</strong> Rust</li>
+                            <li><strong>Python Binding:</strong> PyO3 (Rust-Python interoperability)</li>
+                            <li><strong>Key Libraries:</strong> geo and geo-types (geometric operations), rayon (data parallelism), rstar (R-tree spatial indexing), criterion (benchmarking)</li>
+                        </ul>
+
+                        <p><strong>Key Features:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Parallel Spatial Joins:</strong> Leverages multi-core CPUs for significant performance gains</li>
+                            <li><strong>R-tree Indexing:</strong> Uses spatial indexing (rstar) for efficient spatial queries</li>
+                            <li><strong>Memory Efficiency:</strong> Low-level memory management in Rust</li>
+                            <li><strong>Python Interoperability:</strong> Seamless integration with Python geospatial workflows via PyO3</li>
+                        </ul>
+
+                        <p><strong>Use Cases:</strong> Large-scale spatial join operations, performance-critical geospatial analysis, integration into Python data science workflows</p>
+
+                        <p><strong>Key Skills Demonstrated:</strong> Systems programming in Rust, parallel computing and concurrency, spatial algorithms and data structures (R-trees), cross-language interoperability (Rust-Python), performance optimization and benchmarking, low-level memory management, high-performance computing for geospatial applications</p>
+                </article>
+
+                <article>
+                        <h3>Minneapolis Neighborhoods Amenities Dashboard</h3>
+                        <p><strong>Project Overview:</strong></p>
+                        <p>Created an interactive ArcGIS Dashboard providing a comprehensive view of all Minneapolis neighborhoods and their associated amenities to help users explore family-friendly, lively, and quiet areas.</p>
+
+                        <p><strong>Technical Implementation:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Platform:</strong> ArcGIS Online Dashboard</li>
+                            <li><strong>Data Source:</strong> OpenStreetMap via Overpass API</li>
+                            <li><strong>Processing:</strong> Python (ArcPy, Jupyter Notebook)</li>
+                            <li><strong>Key Libraries:</strong> arcpy, requests, geopandas</li>
+                        </ul>
+
+                        <p><strong>Amenity Categories:</strong> Bars, Restaurants, Cafes, Arts Centers, Music Venues, Schools, Kindergartens, Community Centers, Parks, Gyms</p>
+
+                        <p><strong>Key Features:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Interactive Map:</strong> Users can click on neighborhoods to see contained amenities</li>
+                            <li><strong>Amenity Details:</strong> Click on individual points to learn more about specific locations</li>
+                            <li><strong>Zoom Functionality:</strong> Explore specific neighborhoods in detail</li>
+                            <li><strong>Filtering:</strong> Filter by neighborhood characteristics</li>
+                            <li><strong>Comprehensive Coverage:</strong> All Minneapolis neighborhoods included</li>
+                        </ul>
+
+                        <p><strong>Key Skills Demonstrated:</strong> Web GIS dashboard design, API integration (Overpass API for OpenStreetMap data), Python automation with ArcPy, spatial analysis and geoprocessing, user-centered design for interactive mapping</p>
+
+                        <!-- Container for the ArcGIS Dashboard iframe -->
+                        <iframe src="https://umn.maps.arcgis.com/apps/dashboards/a976920af8094ff3b6b5b01b5c0e880e"
+                                width="100%" height="600px" style="border:none;">
+                        </iframe>
+                </article>
             </div>
         </div>
 

@@ -9,16 +9,16 @@
     <style>
         .white-box {
             background-color: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 40px;
+            border-radius: 12px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: calc(100% - 40px); /* Adjust width for full width minus padding */
-            margin: 20px auto; /* Center the white box horizontally */
-            flex: 1; /* Allow white box to grow and take available space */
+            width: calc(100% - 40px);
+            margin: 20px auto;
+            flex: 1;
             display: flex;
             flex-direction: column;
-            text-align: center; /* Center all text */
-            max-width: 800px; /* Limit the max-width to create margins */
+            text-align: center;
+            max-width: 900px;
         }
 
         .white-box img.responsive-image {
@@ -41,10 +41,9 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="resume.html">Resume</a></li>
-                    <li><a href="graduate_work.html">Graduate Class Work</a></li>
+                    <li><a href="graduate_work.html">Projects</a></li>
                     <li><a href="research_work.html">Research Work</a></li>
-                    <li><a href="professional_experience.html">Professional Experience</a></li>
-                    <li><a href="about.html">About this Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -52,19 +51,73 @@
         <div class="container"> <!-- Wrap everything in a container -->
             <div class="white-box">
                 <section id="research_work">
-                    <h2>Research Assistant - GEMS Informatics</h2>
-                    <p><strong>Research Advisor:</strong> Dr. Bryan Runck</p>
+                    <h2>Graduate Research Assistant</h2>
+                    <div style="background: rgba(124, 179, 66, 0.08); padding: 20px; border-radius: 10px; margin: 20px auto 40px; max-width: 700px;">
+                        <p style="margin: 5px 0;"><strong style="color: var(--primary-color);">Lab:</strong> RTGS Lab, GEMS Informatics Center, University of Minnesota</p>
+                        <p style="margin: 5px 0;"><strong style="color: var(--primary-color);">Research Advisor:</strong> Dr. Bryan Runck</p>
+                        <p style="margin: 5px 0;"><strong style="color: var(--primary-color);">Duration:</strong> August 2024 - Present</p>
+                    </div>
+
                     <article>
-                        <h3>Research Work</h3>
-                        <p><strong>Overview:</strong> Parcel Prioritization Model for Hennepin County</p>
-                        <p>Developing a comprehensive geospatial model that prioritizes parcels for conservation efforts using Python and open-source libraries. The model conducts spatial analysis, automates workflow, streamlines data processing, and visualizes outputs. Key libraries used include Pandas, GeoPandas, Shapely, NumPy, and Matplotlib.</p>
+                        <h3>1. Conservation Parcel Prioritization Model</h3>
+                        <p><strong>Project Overview:</strong></p>
+                        <p>Developed a comprehensive geospatial suitability model to prioritize land parcels for conservation efforts in Hennepin County, Minnesota. The model analyzes multiple environmental and spatial criteria to score and rank parcels based on their conservation value.</p>
+
+                        <p><strong>Technical Implementation:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Language:</strong> Python</li>
+                            <li><strong>Key Libraries:</strong> Pandas, GeoPandas, Shapely, NumPy, Matplotlib, Seaborn, SciPy, Scikit-learn</li>
+                            <li><strong>Data Sources:</strong> Protected Areas, Natural Spaces, Minnesota Biological Survey (MBS), Minnesota Land Cover Classification System (MLCCS), Wildlife Action Network, Important Bird Areas, Bee Habitat, Risk of Development layers, Water Resources (Shoreland Buffers, Floodplains, Wetlands, Headwaters, Groundwater data)</li>
+                        </ul>
+
+                        <p><strong>Model Components:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Spatial Context (30% weight):</strong> Distance to Protected Areas, Distance to Natural Spaces, Potential Easement Analysis</li>
+                            <li><strong>Habitat Quality and Diversity (25% weight):</strong> Quality Ranking based on MBS and MLCCS data, Quality Community identification, Habitat Diversity assessment</li>
+                            <li><strong>Size (15% weight):</strong> Relative and Absolute Size scoring</li>
+                            <li><strong>Wildlife and Plant Conservation (15% weight):</strong> Wildlife Action Network rankings, Bird Habitat, Pollinator Habitat</li>
+                            <li><strong>Risk of Conservation (10% weight):</strong> Risk of Development scoring</li>
+                            <li><strong>Water Resources (5% weight):</strong> Shoreland Buffer analysis, Floodplain presence, Wetlands coverage, Headwater area identification, Groundwater Recharge potential, Groundwater Contamination susceptibility</li>
+                        </ul>
+
+                        <p><strong>Key Achievements:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li>Successfully automated complex multi-criteria spatial analysis</li>
+                            <li>Streamlined data processing workflow for efficient execution</li>
+                            <li>Provided actionable rankings for conservation decision-making</li>
+                            <li>Used SciPy and Scikit-learn for statistical validation of model results</li>
+                        </ul>
+
                         <figure>
                             <img src="assets/Hennepin_Model_Output.png" alt="Hennepin Prioritization Model outputs" class="responsive-image">
                             <figcaption>Figure 1: Hennepin Prioritization Model Output Symbolized for Priority with Natural Breaks</figcaption>
-                        </figure>                        
+                        </figure>
                         <br>
                     </article>
-                    <!-- Add more research projects here -->
+
+                    <article>
+                        <h3>2. ETL Pipeline Development for Conservation Model</h3>
+                        <p><strong>Project Overview:</strong></p>
+                        <p>Developing a command-line interface (CLI) based ETL (Extract, Transform, Load) pipeline to automate the extraction of input datasets for the conservation parcel prioritization model and load them into a SQL database.</p>
+
+                        <p><strong>Technical Implementation:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Language:</strong> Python</li>
+                            <li><strong>Key Technologies:</strong> SQL database management, CLI development, data pipeline automation</li>
+                            <li><strong>Purpose:</strong> Streamline data acquisition and preparation for the conservation model</li>
+                        </ul>
+
+                        <p><strong>Key Features:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li>Automated extraction of geospatial datasets from multiple source locations</li>
+                            <li>Data transformation and standardization</li>
+                            <li>Loading processed data into SQL database for efficient querying</li>
+                            <li>Command-line interface for easy execution and configuration</li>
+                        </ul>
+
+                        <p><strong>Status:</strong> In Development</p>
+                        <br>
+                    </article>
                 </section>
             </div>
         </div>
