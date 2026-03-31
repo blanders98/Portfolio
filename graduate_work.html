@@ -55,6 +55,38 @@
                 </section>
 
                 <article>
+                        <h3>Building Classification for Emergency Management</h3>
+                        <p><strong>Project Overview:</strong></p>
+                        <p>Developed a machine learning pipeline to automatically classify 136,534 Minneapolis building footprints into three FEMA Public Assistance Program categories (residential, commercial, public) using multi-modal remote sensing data. The system achieves 96.79% accuracy and is designed to accelerate disaster response resource allocation.</p>
+
+                        <p><strong>Technical Implementation:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Language:</strong> Python</li>
+                            <li><strong>Key Libraries:</strong> scikit-learn, XGBoost, GeoPandas, Rasterio, Rasterstats, Shapely</li>
+                            <li><strong>Data Sources:</strong> NAIP (0.3m resolution), Sentinel-2 (10–20m), Microsoft US Building Footprints, Hennepin County parcels</li>
+                            <li><strong>GIS Integration:</strong> ArcGIS Pro, ESRI Story Map</li>
+                        </ul>
+
+                        <p><strong>Project Components:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li><strong>Feature Engineering:</strong> Engineered 23 features across four categories — NAIP spectral (9), Sentinel-2 spectral (8), morphological (4), and spatial context (2)</li>
+                            <li><strong>Ground Truth Labeling:</strong> Two-stage hierarchical labeling from Hennepin County parcel data using ownership keywords and land use codes</li>
+                            <li><strong>Class Imbalance Handling:</strong> Applied class weighting (up to 24x for minority classes), improving public building recall from 36% to 81%</li>
+                            <li><strong>Model Comparison:</strong> Trained and evaluated Random Forest, Linear SVM, and XGBoost; Random Forest selected with 96.79% test accuracy</li>
+                            <li><strong>Spatial Outputs:</strong> Exported classified buildings as GeoPackage and Shapefile for downstream GIS analysis</li>
+                        </ul>
+
+                        <p><strong>Key Findings:</strong></p>
+                        <ul style="text-align: left; max-width: 700px; margin: 0 auto;">
+                            <li>Coarse-resolution Sentinel-2 neighborhood context (37% feature importance) vastly outweighed fine-resolution NAIP roof detail (2.4%), showing building type is driven more by location than appearance</li>
+                            <li>Building size and shape (area, perimeter, compactness) accounted for 27% of model importance</li>
+                            <li>Unweighted models hit 97% accuracy but only 36% recall on public buildings; class weighting recovered 81% recall with only a 0.23% accuracy trade-off</li>
+                        </ul>
+
+                        <p><strong>Key Skills Demonstrated:</strong> Multi-source remote sensing data integration, supervised machine learning and model selection, class imbalance mitigation, zonal statistics and spatial feature extraction, geospatial data processing at scale (136k+ features), scientific communication via ESRI Story Map</p>
+                </article>
+
+                <article>
                         <h3>Heat Risk Assessment Agent Based Model</h3>
                         <p><strong>Project Overview:</strong></p>
                         <p>Developed a comprehensive heat risk assessment model to identify vulnerable populations and high-risk areas for heat-related health issues.</p>
@@ -192,6 +224,7 @@
                                 width="100%" height="600px" style="border:none;">
                         </iframe>
                 </article>
+
             </div>
         </div>
 
