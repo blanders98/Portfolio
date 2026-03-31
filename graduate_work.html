@@ -25,6 +25,26 @@
         .github-link {
             color: #0074D9; /* Blue color for GitHub link */
         }
+
+        /* Collapsible project styles */
+        article details summary {
+            cursor: pointer;
+            list-style: none;
+        }
+        article details summary::-webkit-details-marker {
+            display: none;
+        }
+        article details summary h3 {
+            display: inline;
+        }
+        article details summary::before {
+            content: '▶  ';
+            font-size: 0.75em;
+            color: #555;
+        }
+        article details[open] summary::before {
+            content: '▼  ';
+        }
     </style>
 </head>
 
@@ -55,7 +75,8 @@
                 </section>
 
                 <article>
-                        <h3>Building Classification for Emergency Management</h3>
+                    <details>
+                        <summary><h3>Building Classification for Emergency Management</h3></summary>
                         <p><strong>Project Overview:</strong></p>
                         <p>Developed a machine learning pipeline to automatically classify 136,534 Minneapolis building footprints into three FEMA Public Assistance Program categories (residential, commercial, public) using multi-modal remote sensing data. The system achieves 96.79% accuracy and is designed to accelerate disaster response resource allocation.</p>
 
@@ -86,10 +107,12 @@
                         <p><strong>Key Skills Demonstrated:</strong> Multi-source remote sensing data integration, supervised machine learning and model selection, class imbalance mitigation, zonal statistics and spatial feature extraction, geospatial data processing at scale (136k+ features), scientific communication via ESRI Story Map</p>
 
                         <p><a href="https://storymaps.arcgis.com/stories/995c042fb03348b49bc209e77d133c61" target="_blank" class="github-link">View the full ESRI Story Map →</a></p>
+                    </details>
                 </article>
 
                 <article>
-                        <h3>Heat Risk Assessment Agent Based Model</h3>
+                    <details>
+                        <summary><h3>Heat Risk Assessment Agent Based Model</h3></summary>
                         <p><strong>Project Overview:</strong></p>
                         <p>Developed a comprehensive heat risk assessment model to identify vulnerable populations and high-risk areas for heat-related health issues.</p>
 
@@ -111,10 +134,12 @@
                         </ul>
 
                         <p><strong>Key Skills Demonstrated:</strong> Multi-source data integration, spatial modeling and analysis, team collaboration on complex geospatial project, database design and management, scientific communication</p>
+                    </details>
                 </article>
 
                 <article>
-                        <h3>Suitable - Suitability Analysis Web Application</h3>
+                    <details>
+                        <summary><h3>Suitable - Suitability Analysis Web Application</h3></summary>
                         <p><strong>Project Overview:</strong></p>
                         <p>Developed Suitable, an interactive web application that allows users to perform multi-criteria suitability analysis on their own geospatial datasets through an intuitive interface, without requiring GIS expertise or coding knowledge.</p>
 
@@ -143,10 +168,12 @@
                         </ul>
 
                         <p><strong>Key Skills Demonstrated:</strong> Full-stack web development with Streamlit, object-oriented programming in Python, interactive web mapping with Folium, user experience (UX) design, software architecture and modular design, geospatial data processing and analysis</p>
+                    </details>
                 </article>
 
                 <article>
-                        <h3>GeoChat - Conversational GIS Interface</h3>
+                    <details>
+                        <summary><h3>GeoChat - Conversational GIS Interface</h3></summary>
                         <p><strong>Project Overview:</strong></p>
                         <p>Created GeoChat, a Jupyter notebook-based application providing a natural language interface for geospatial data interaction. Users can perform common GIS operations through conversational commands rather than specialized syntax.</p>
 
@@ -168,10 +195,12 @@
                         <p><strong>Example Commands:</strong> "go to New York City", "show parks", "calculate area", "buffer by 5 km", "measure distance from Denver to Seattle", "show route from Miami to Orlando"</p>
 
                         <p><strong>Key Skills Demonstrated:</strong> Natural language processing (pattern matching, intent recognition), API integration (OpenStreetMap, Overpass, OSRM), interactive widget development with ipywidgets, user interface design for non-technical users, geospatial analysis automation, making GIS accessible to broader audiences</p>
+                    </details>
                 </article>
 
                 <article>
-                        <h3>SynerGIS - Parallel Spatial Join Library (Rust)</h3>
+                    <details>
+                        <summary><h3>SynerGIS - Parallel Spatial Join Library (Rust)</h3></summary>
                         <p><strong>Project Overview:</strong></p>
                         <p>Developed SynerGIS, a high-performance Rust library for parallel spatial join operations, designed to be called from Python. The project demonstrates performance optimization through parallelization and low-level systems programming.</p>
 
@@ -193,10 +222,12 @@
                         <p><strong>Use Cases:</strong> Large-scale spatial join operations, performance-critical geospatial analysis, integration into Python data science workflows</p>
 
                         <p><strong>Key Skills Demonstrated:</strong> Systems programming in Rust, parallel computing and concurrency, spatial algorithms and data structures (R-trees), cross-language interoperability (Rust-Python), performance optimization and benchmarking, low-level memory management, high-performance computing for geospatial applications</p>
+                    </details>
                 </article>
 
                 <article>
-                        <h3>Minneapolis Neighborhoods Amenities Dashboard</h3>
+                    <details>
+                        <summary><h3>Minneapolis Neighborhoods Amenities Dashboard</h3></summary>
                         <p><strong>Project Overview:</strong></p>
                         <p>Created an interactive ArcGIS Dashboard providing a comprehensive view of all Minneapolis neighborhoods and their associated amenities to help users explore family-friendly, lively, and quiet areas.</p>
 
@@ -225,6 +256,7 @@
                         <iframe src="https://umn.maps.arcgis.com/apps/dashboards/a976920af8094ff3b6b5b01b5c0e880e"
                                 width="100%" height="600px" style="border:none;">
                         </iframe>
+                    </details>
                 </article>
 
             </div>
