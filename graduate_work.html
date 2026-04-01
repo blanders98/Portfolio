@@ -30,38 +30,45 @@
         article details summary {
             cursor: pointer;
             list-style: none;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
         }
         article details summary::-webkit-details-marker {
             display: none;
         }
-        article details summary h3 {
-            display: inline;
-        }
         article details summary::before {
-            content: '▶  ';
+            content: '▶';
             font-size: 0.75em;
             color: #555;
+            margin-top: 5px;
+            flex-shrink: 0;
         }
         article details[open] summary::before {
-            content: '▼  ';
+            content: '▼';
+        }
+        .summary-content h3 {
+            margin: 0 0 4px 0;
         }
 
         /* Project tags */
         .project-tags {
             list-style: none;
-            padding: 4px 0 0 1.4em;
+            padding: 0;
             margin: 0;
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
-            justify-content: flex-start;
+            gap: 2px 16px;
         }
         .project-tags li {
-            font-size: 0.72rem;
+            font-size: 0.8rem;
             color: #555;
-            background: #f0f0f0;
-            border-radius: 4px;
-            padding: 2px 8px;
+            padding: 6px 0 0 18px;
+        }
+        .project-tags li::before {
+            font-size: 1rem;
+            top: 7px;
+            left: 4px;
         }
     </style>
 </head>
@@ -96,13 +103,15 @@
                 <article>
                     <details>
                         <summary>
-                            <h3>Building Classification for Emergency Management</h3>
-                            <ul class="project-tags">
-                                <li>Remote Sensing</li>
-                                <li>Machine Learning</li>
-                                <li>Geospatial Analysis</li>
-                                <li>Python</li>
-                            </ul>
+                            <div class="summary-content">
+                                <h3>Building Classification for Emergency Management</h3>
+                                <ul class="project-tags">
+                                    <li>Remote Sensing</li>
+                                    <li>Machine Learning</li>
+                                    <li>Geospatial Analysis</li>
+                                    <li>Python</li>
+                                </ul>
+                            </div>
                         </summary>
                         <p><strong>Project Overview:</strong></p>
                         <p>Developed a machine learning pipeline to automatically classify 136,534 Minneapolis building footprints into three FEMA Public Assistance Program categories (residential, commercial, public) using multi-modal remote sensing data. The system achieves 96.79% accuracy and is designed to accelerate disaster response resource allocation.</p>
@@ -140,14 +149,16 @@
                 <article>
                     <details>
                         <summary>
-                            <h3>Heat Risk Assessment Agent Based Model</h3>
-                            <ul class="project-tags">
-                                <li>Geospatial Analysis</li>
-                                <li>Agent-Based Modeling</li>
-                                <li>Database Design</li>
-                                <li>Python</li>
-                                <li>SQL</li>
-                            </ul>
+                            <div class="summary-content">
+                                <h3>Heat Risk Assessment Agent Based Model</h3>
+                                <ul class="project-tags">
+                                    <li>Geospatial Analysis</li>
+                                    <li>Agent-Based Modeling</li>
+                                    <li>Database Design</li>
+                                    <li>Python</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </div>
                         </summary>
                         <p><strong>Project Overview:</strong></p>
                         <p>Developed a comprehensive heat risk assessment model to identify vulnerable populations and high-risk areas for heat-related health issues.</p>
@@ -176,13 +187,15 @@
                 <article>
                     <details>
                         <summary>
-                            <h3>Suitable - Suitability Analysis Web Application</h3>
-                            <ul class="project-tags">
-                                <li>Web Application Development</li>
-                                <li>Multi-Criteria Analysis</li>
-                                <li>Geospatial Analysis</li>
-                                <li>Python</li>
-                            </ul>
+                            <div class="summary-content">
+                                <h3>Suitable - Suitability Analysis Web Application</h3>
+                                <ul class="project-tags">
+                                    <li>Web Application Development</li>
+                                    <li>Multi-Criteria Analysis</li>
+                                    <li>Geospatial Analysis</li>
+                                    <li>Python</li>
+                                </ul>
+                            </div>
                         </summary>
                         <p><strong>Project Overview:</strong></p>
                         <p>Developed Suitable, an interactive web application that allows users to perform multi-criteria suitability analysis on their own geospatial datasets through an intuitive interface, without requiring GIS expertise or coding knowledge.</p>
@@ -218,13 +231,15 @@
                 <article>
                     <details>
                         <summary>
-                            <h3>GeoChat - Conversational GIS Interface</h3>
-                            <ul class="project-tags">
-                                <li>Natural Language Processing</li>
-                                <li>API Integration</li>
-                                <li>Interactive Mapping</li>
-                                <li>Python</li>
-                            </ul>
+                            <div class="summary-content">
+                                <h3>GeoChat - Conversational GIS Interface</h3>
+                                <ul class="project-tags">
+                                    <li>Natural Language Processing</li>
+                                    <li>API Integration</li>
+                                    <li>Interactive Mapping</li>
+                                    <li>Python</li>
+                                </ul>
+                            </div>
                         </summary>
                         <p><strong>Project Overview:</strong></p>
                         <p>Created GeoChat, a Jupyter notebook-based application providing a natural language interface for geospatial data interaction. Users can perform common GIS operations through conversational commands rather than specialized syntax.</p>
@@ -253,14 +268,16 @@
                 <article>
                     <details>
                         <summary>
-                            <h3>SynerGIS - Parallel Spatial Join Library (Rust)</h3>
-                            <ul class="project-tags">
-                                <li>Systems Programming</li>
-                                <li>Parallel Computing</li>
-                                <li>Python Interoperability</li>
-                                <li>Rust</li>
-                                <li>Python</li>
-                            </ul>
+                            <div class="summary-content">
+                                <h3>SynerGIS - Parallel Spatial Join Library (Rust)</h3>
+                                <ul class="project-tags">
+                                    <li>Systems Programming</li>
+                                    <li>Parallel Computing</li>
+                                    <li>Python Interoperability</li>
+                                    <li>Rust</li>
+                                    <li>Python</li>
+                                </ul>
+                            </div>
                         </summary>
                         <p><strong>Project Overview:</strong></p>
                         <p>Developed SynerGIS, a high-performance Rust library for parallel spatial join operations, designed to be called from Python. The project demonstrates performance optimization through parallelization and low-level systems programming.</p>
@@ -289,14 +306,16 @@
                 <article>
                     <details>
                         <summary>
-                            <h3>Minneapolis Neighborhoods Amenities Dashboard</h3>
-                            <ul class="project-tags">
-                                <li>Web GIS</li>
-                                <li>Data Visualization</li>
-                                <li>Automated Data Collection</li>
-                                <li>Python</li>
-                                <li>ArcGIS</li>
-                            </ul>
+                            <div class="summary-content">
+                                <h3>Minneapolis Neighborhoods Amenities Dashboard</h3>
+                                <ul class="project-tags">
+                                    <li>Web GIS</li>
+                                    <li>Data Visualization</li>
+                                    <li>Automated Data Collection</li>
+                                    <li>Python</li>
+                                    <li>ArcGIS</li>
+                                </ul>
+                            </div>
                         </summary>
                         <p><strong>Project Overview:</strong></p>
                         <p>Created an interactive ArcGIS Dashboard providing a comprehensive view of all Minneapolis neighborhoods and their associated amenities to help users explore family-friendly, lively, and quiet areas.</p>
