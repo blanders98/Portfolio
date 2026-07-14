@@ -9,140 +9,38 @@
     <style>
         .white-box {
             background-color: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            width: calc(100% - 40px);
-            margin: 20px auto 40px auto;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            max-width: 1000px;
-        }
-
-        /* Disable hover effect for home page white box */
-        .white-box:hover {
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            transform: none;
-        }
-
-        /* Journey Section Styling */
-        #journey_section {
-            margin-top: 50px;
-        }
-
-        #journey_section h2 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-            font-size: 2rem;
-            text-align: center;
-        }
-
-        #journey_section .subtitle {
-            color: var(--text-light);
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        #journeyMap {
-            width: 100%;
-            height: 500px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-
-        /* Custom popup styling */
-        .journey-popup {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .journey-popup .popup-title {
-            font-weight: 600;
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
-        .journey-popup .popup-role {
-            color: var(--secondary-color);
-            font-weight: 500;
-            margin-bottom: 3px;
-        }
-
-        .journey-popup .popup-location {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            font-style: italic;
-            margin-bottom: 8px;
-        }
-
-        .journey-popup .popup-description {
-            color: var(--text-dark);
-            line-height: 1.6;
+            width: calc(100% - 40px); /* Adjust width for full width minus padding */
+            margin: 20px auto; /* Center the white box horizontally */
+            flex: 1; /* Allow white box to grow and take available space */
+            display: flex;
+            flex-direction: column;
+            text-align: center; /* Center all text */
+            max-width: 800px; /* Limit the max-width to create margins */
         }
 
         /* Style for LinkedIn link */
         .linkedin-link {
-            color: #0074D9;
-            text-decoration: none;
+            color: #0074D9; /* Blue color for LinkedIn link */
+            text-decoration: none; /* Remove underline */
         }
 
+        /* Optional: Add a hover effect for LinkedIn link */
         .linkedin-link:hover {
             text-decoration: underline;
         }
 
+        /* Ensure other links have the same color as the rest of the text */
         .white-box a {
             color: inherit;
             text-decoration: none;
         }
 
+        /* Add hover effect for other links */
         .white-box a:hover {
             text-decoration: underline;
-        }
-
-        /* Improved About Section */
-        #about_me h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: var(--primary-color);
-        }
-
-        #about_me .intro-text {
-            font-size: 1.2rem;
-            line-height: 1.9;
-            max-width: 700px;
-            margin: 25px auto;
-            color: var(--text-dark);
-        }
-
-        .headshot-container {
-            margin: 40px auto;
-            max-width: 250px;
-            position: relative;
-        }
-
-        .headshot-container img {
-            border-radius: 50%;
-            border: 5px solid var(--accent-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .headshot-container img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(124, 179, 66, 0.3);
-        }
-
-        .tech-badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            margin: 40px auto;
-            max-width: 600px;
         }
     </style>
 </head>
@@ -157,41 +55,30 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="resume.html">Resume</a></li>
-                    <li><a href="graduate_work.html">Projects</a></li>
+                    <li><a href="graduate_work.html">Graduate Class Work</a></li>
                     <li><a href="research_work.html">Research Work</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="professional_experience.html">Professional Experience</a></li>
+                    <li><a href="about.html">About this Portfolio</a></li>
                 </ul>
             </nav>
         </header>
 
-        <div class="container">
+        <div class="container"> <!-- Wrap everything in a container -->
             <div class="white-box">
                 <section id="about_me">
                     <h2>About Me</h2>
-                    <figure class="headshot-container">
-                        <img src="assets/headshot.jpg" alt="Ben Landers - GIS Professional">
+                    <p>Dedicated geospatial data engineer and recent Masters of Geographic Information Science graduate (University of Minnesota) with five years of experience specializing in using advanced geospatial technologies and data analytics to solve problems across a variety of domains.</p>
+                    <figure>
+                        <img src="assets/headshot.jpg" alt="BL_Headshot">
                     </figure>
-                    <p class="intro-text">
-                        Master of Geographic Information Science student at the University of Minnesota (<strong>expected graduation: May 2026</strong>).
-                        Geospatial data scientist and engineer with three years of environmental consulting experience,
-                        specializing in leveraging advanced geospatial technologies, Python programming, and data analytics to solve
-                        complex spatial problems across diverse applications and industries.
-                    </p>
-
-                    <div class="tech-badges">
-                        <span class="tech-badge">Geospatial Data Science</span>
-                        <span class="tech-badge">Python & SQL</span>
-                        <span class="tech-badge">Spatial Analytics</span>
-                        <span class="tech-badge">GIS Development</span>
-                        <span class="tech-badge">Data Engineering</span>
-                    </div>
                 </section>
 
-                <!-- Journey Map Section -->
-                <section id="journey_section">
-                    <h2>My Journey</h2>
-                    <p class="subtitle">From academics to the workforce - explore my career path thus far</p>
-                    <div id="journeyMap"></div>
+                <!-- New Contact Section -->
+                <section id="contact">
+                    <h2>Contact</h2>
+                    <p>If you have any questions or would like to get in touch, feel free to reach out!</p>
+                    <p><strong>Email:</strong> <a href="mailto:benlanders417@gmail.com">benlanders417@gmail.com</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ben-l-526415219/" target="_blank" class="linkedin-link">LinkedIn</a></p>
                 </section>
             </div>
         </div>
