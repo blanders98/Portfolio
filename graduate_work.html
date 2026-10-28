@@ -31,7 +31,7 @@
             <p>A machine learning pipeline that classifies 136,534 Minneapolis building footprints into three FEMA Public Assistance categories (residential, commercial, public) from multi-source remote sensing data. It reaches 96.79% accuracy and is designed to speed up disaster response resource allocation.</p>
             <h4>Built with</h4>
             <ul>
-                <li>Python: scikit-learn, XGBoost, GeoPandas, Rasterio, Rasterstats, Shapely</li>
+                <li>Python: scikit-learn, Random Forest, XGBoost, GeoPandas, Rasterio, Rasterstats, Shapely</li>
                 <li>Data: NAIP (0.3 m), Sentinel-2 (10–20 m), Microsoft US Building Footprints, Hennepin County parcels</li>
                 <li>ArcGIS Pro and an Esri StoryMap for communication</li>
             </ul>
@@ -40,7 +40,7 @@
                 <li>Engineered 23 features: NAIP spectral (9), Sentinel-2 spectral (8), morphological (4), and spatial context (2)</li>
                 <li>Labeled ground truth in two stages from parcel ownership keywords and land use codes</li>
                 <li>Applied class weighting (up to 24×), raising public building recall from 36% to 81%</li>
-                <li>Compared Random Forest, Linear SVM, and XGBoost; Random Forest won at 96.79% test accuracy</li>
+                <li>Trained three models on an 80/20 train/test split and selected Random Forest: Random Forest 96.79%, XGBoost 96.03%, Linear SVM 94.70% test accuracy</li>
                 <li>Exported results as GeoPackage and Shapefile for downstream GIS work</li>
             </ul>
             <h4>Findings</h4>
