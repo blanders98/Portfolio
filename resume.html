@@ -2,182 +2,148 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume | Ben Landers</title>
+    <meta name="description" content="Experience, education, and skills of Ben Landers, geospatial data engineer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;1,400&family=Barlow+Condensed:wght@500;600&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <style>
-        .white-box {
-            background-color: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: calc(100% - 40px);
-            margin: 20px auto;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            max-width: 900px;
-        }
-
-        ul.core-proficiencies {
-            list-style-type: disc;
-            padding-left: 0; /* Remove default padding */
-            text-align: left;
-            column-count: 2; /* Split into two columns */
-            column-gap: 20px; /* Add some space between columns */
-            margin: 0 auto; /* Center the columns */
-            max-width: 400px; /* Limit the width of the columns container */
-        }
-
-        ul.core-proficiencies li {
-            padding-left: 10px; /* Add padding to the left for bullets */
-        }
-
-        /* Style for LinkedIn link */
-        .linkedin-link {
-            color: #0074D9; /* Blue color for LinkedIn link */
-        }
-    </style>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
+<body data-center="45.0352,-93.5822" data-zoom="12">
+    <header class="site-header"></header>
+    <div id="map" aria-hidden="true"></div>
 
-<body>
-    <div id="map"></div>
-
-    <div class="content-wrapper">
-        <header>
-            <h1>Ben Landers Portfolio - Resume</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="graduate_work.html">Projects</a></li>
-                    <li><a href="research_work.html">Research Work</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <div class="container"> <!-- Wrap everything in a container -->
-            <div class="white-box">
-                <section id="resume">
-                    <h2>Resume</h2>
-                    <p>Here, you can find an overview of my professional qualifications and experiences.</p>
-                    <article>
-                        <h3>Benjamin (Ben) Landers</h3>
-                        <p>Minneapolis, MN<br> 
-                        <a href="https://www.linkedin.com/in/ben-landers-526415219/" target="_blank" class="linkedin-link">LinkedIn</a> | benlanders417@gmail.com</p>
-
-                        <h3 style="margin-top: 40px;">Core Proficiencies</h3>
-
-                        <div style="background: rgba(124, 179, 66, 0.05); padding: 25px; border-radius: 10px; margin: 20px 0; border-left: 4px solid var(--accent-color);">
-                            <p><strong style="color: var(--primary-color); font-size: 1.1rem;">Technical Skills</strong></p>
-                            <ul class="core-proficiencies">
-                                <li>GIS</li>
-                                <li>Python Programming</li>
-                                <li>SQL & Database Management</li>
-                                <li>Data Analysis</li>
-                                <li>Statistical Analysis</li>
-                                <li>Spatial Analysis</li>
-                                <li>Machine Learning</li>
-                                <li>Data Processing Pipeline Development (ETL)</li>
-                                <li>Data Visualization</li>
-                                <li>Web GIS Development</li>
-                                <li>CLI Development</li>
-                            </ul>
-                        </div>
-
-                        <div style="background: rgba(63, 110, 122, 0.06); padding: 25px; border-radius: 10px; margin: 20px 0; border-left: 4px solid var(--tertiary-color);">
-                            <p><strong style="color: var(--primary-color); font-size: 1.1rem;">Tools & Software</strong></p>
-                            <ul class="core-proficiencies">
-                                <li>ArcGIS (Pro, Online, ArcPy)</li>
-                                <li>QGIS</li>
-                                <li>Python</li>
-                                <li>SQL</li>
-                                <li>GeoPandas & Pandas</li>
-                                <li>NumPy & SciPy</li>
-                                <li>Matplotlib & Seaborn</li>
-                                <li>Scikit-learn</li>
-                                <li>Streamlit</li>
-                                <li>Folium/Leaflet</li>
-                                <li>Git & GitHub</li>
-                                <li>Jupyter</li>
-                                <li>PostgreSQL/PostGIS</li>
-                                <li>Docker</li>
-                                <li>Jira</li>
-                            </ul>
-                        </div>
-
-                        <div style="background: rgba(74, 139, 166, 0.05); padding: 25px; border-radius: 10px; margin: 20px 0; border-left: 4px solid var(--secondary-color);">
-                            <p><strong style="color: var(--primary-color); font-size: 1.1rem;">Domain Expertise</strong></p>
-                            <ul class="core-proficiencies">
-                                <li>Location Intelligence</li>
-                                <li>Geospatial Analysis</li>
-                                <li>Geospatial Data Engineering</li>
-                                <li>Spatial Data Management</li>
-                                <li>Multi-Criteria Decision Analysis</li>
-                            </ul>
-                        </div>
-
-                        <h3 style="margin-top: 40px;">Professional Experience</h3>
-
-                        <div style="position: relative; padding-left: 30px; border-left: 3px solid var(--accent-color); margin: 30px 0;">
-                            <div style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--accent-color); border-radius: 50%;"></div>
-                            <h4 style="margin-top: 0;">Power Systems Engineer I</h4>
-                            <p style="color: var(--secondary-color); font-weight: 500; margin: 5px 0; text-align: left;">AspenTech (Emerson) | Medina, MN | April 2026 - Present</p>
-                            <p style="text-align: left; line-height: 1.7;">Model electric distribution power systems for customer-specific software configurations and develop custom data automation tools for AI integration into modeling work. Utilize open source Python tooling to develop data processing and analysis pipelines for customer data.</p>
-                        </div>
-
-                        <div style="position: relative; padding-left: 30px; border-left: 3px solid var(--accent-color); margin: 30px 0;">
-                            <div style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--accent-color); border-radius: 50%;"></div>
-                            <h4 style="margin-top: 0;">GIS Data Engineer Intern</h4>
-                            <p style="color: var(--secondary-color); font-weight: 500; margin: 5px 0; text-align: left;">Juvare | Remote | May 2025 - May 2026</p>
-                            <p style="text-align: left; line-height: 1.7;">Work on software development team to develop and execute data processing pipelines. Process datasets obtained from clients for use in software products. Upload and integrate processed data into software systems. Develop automated data processing pipeline to expedite workflow and improve efficiency.</p>
-                        </div>
-
-                        <div style="position: relative; padding-left: 30px; border-left: 3px solid var(--accent-color); margin: 30px 0;">
-                            <div style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--accent-color); border-radius: 50%;"></div>
-                            <h4 style="margin-top: 0;">Graduate Research Assistant</h4>
-                            <p style="color: var(--secondary-color); font-weight: 500; margin: 5px 0; text-align: left;">RTGS Lab, GEMS Informatics Center, University of Minnesota | Minneapolis, MN | August 2024 - May 2026</p>
-                            <p style="text-align: left; line-height: 1.7;">Developed comprehensive geospatial model for conservation parcel prioritization using Python and open-source libraries. Conducted spatial analyses and automated workflows to streamline data processing. Created data visualizations for model outputs and results. Validated model results using statistical and machine learning approaches. Developing CLI-based ETL pipeline to extract model input datasets from source locations and load into SQL database.</p>
-                        </div>
-
-                        <div style="position: relative; padding-left: 30px; border-left: 3px solid var(--secondary-color); margin: 30px 0;">
-                            <div style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--secondary-color); border-radius: 50%;"></div>
-                            <h4 style="margin-top: 0;">Staff Geoscientist II</h4>
-                            <p style="color: var(--secondary-color); font-weight: 500; margin: 5px 0; text-align: left;">Environmental Consulting | Charlottesville, VA | 2021 - 2024</p>
-                            <p style="text-align: left; line-height: 1.7;">Delivered GIS-based analytics through professional-grade maps, spatial analyses, and data visualizations for remediation planning and reporting. Conducted environmental inspections across multiple project sites. Performed groundwater, surface water, and air sampling for remediation projects. Supported environmental remediation planning with geospatial intelligence.</p>
-                        </div>
-
-                        <h3 style="margin-top: 40px;">Education</h3>
-
-                        <div style="position: relative; padding-left: 30px; border-left: 3px solid var(--primary-color); margin: 30px 0;">
-                            <div style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--primary-color); border-radius: 50%;"></div>
-                            <h4 style="margin-top: 0;">Master of Geographic Information Science (MGIS)</h4>
-                            <p style="color: var(--secondary-color); font-weight: 500; margin: 5px 0; text-align: left;">University of Minnesota | Minneapolis, MN | Expected: May 2026</p>
-                            <p style="text-align: left; line-height: 1.7;">Graduate Research Assistant - RTGS Lab, GEMS Informatics Center</p>
-                            <p style="text-align: left; line-height: 1.7;">President, GIS Student Organization (2025-26)</p>
-                        </div>
-
-                        <div style="position: relative; padding-left: 30px; border-left: 3px solid var(--primary-color); margin: 30px 0;">
-                            <div style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--primary-color); border-radius: 50%;"></div>
-                            <h4 style="margin-top: 0;">Bachelor of Arts (BA), Geography - Environment & Health</h4>
-                            <p style="color: var(--secondary-color); font-weight: 500; margin: 5px 0; text-align: left;">University of Western Ontario | London, Ontario, Canada | 2016 - 2021</p>
-                            <p style="text-align: left; line-height: 1.7;">Member of the varsity men's lacrosse team. 4x National Champion (2016, 2017, 2018, and 2019).</p>
-                            <p style="text-align: left; line-height: 1.7;">Western Scholarship of Distinction, 2016</p>
-                        </div>
-                    </article>
-                </section>
-            </div>
-        </div>
-
-        <footer>
-            <p>Contact: benlanders417@gmail.com</p>
-        </footer>
+    <div class="hero">
+        <h1>Resume</h1>
     </div>
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    <main class="sheet">
+        <section>
+            <h2>Experience</h2>
+            <article class="entry">
+                <p class="when">Apr 2026 – present</p>
+                <div>
+                    <h3>Power Systems Engineer I</h3>
+                    <p class="where">AspenTech (Emerson), Medina, MN</p>
+                    <ul>
+                        <li>Lead context data development for an application that uses an open-source LLM to make field mapping decisions in ETL workflows</li>
+                        <li>Build Python automation and pipelines that prepare customer data for the model</li>
+                        <li>Model electric distribution systems for customer-specific software configurations</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="entry">
+                <p class="when">May 2025 – May 2026</p>
+                <div>
+                    <h3>GIS Data Engineer Intern</h3>
+                    <p class="where">Juvare, remote</p>
+                    <ul>
+                        <li>Processed and integrated 50+ customer datasets into emergency management software used to track assets after hurricanes, wildfires, and other events</li>
+                        <li>Built automation scripts and a processing tool that cut manual effort by an estimated 60%</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="entry">
+                <p class="when">Aug 2024 – May 2026</p>
+                <div>
+                    <h3>Graduate Research Assistant</h3>
+                    <p class="where">RTGS Lab, GEMS Informatics Center, University of Minnesota</p>
+                    <ul>
+                        <li>Built a Python suitability model that ranks 400,000+ Hennepin County parcels by conservation value, used by the Natural Resources Partner Coalition (Hennepin County, Three Rivers Park District, Minnesota Land Trust, University of Minnesota)</li>
+                        <li>Validated results with sensitivity analysis and principal component analysis</li>
+                        <li>Built a CLI-based ETL pipeline to load model inputs into a SQL database</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="entry">
+                <p class="when">2021 – 2024</p>
+                <div>
+                    <h3>Staff Geoscientist II</h3>
+                    <p class="where">Montrose Environmental (now Onterris), Charlottesville, VA</p>
+                    <ul>
+                        <li>Produced maps, spatial analyses, and visualizations in ArcMap, ArcGIS Pro, and Surfer for remediation planning and reporting across many projects</li>
+                        <li>Conducted environmental inspections and groundwater, surface water, and air sampling</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <article class="entry">
+                <p class="when">2024 – 2026</p>
+                <div>
+                    <h3>Master of Geographic Information Science</h3>
+                    <p class="where">University of Minnesota, Minneapolis, MN</p>
+                    <p>President, GIS Student Organization (2025–26).</p>
+                </div>
+            </article>
+            <article class="entry">
+                <p class="when">2016 – 2021</p>
+                <div>
+                    <h3>BA, Geography: Environment and Health</h3>
+                    <p class="where">University of Western Ontario, London, ON</p>
+                    <p>Varsity men's lacrosse, four-time national champion (2016–2019). Western Scholarship of Distinction, 2016.</p>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skills">
+                <div>
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Rust</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Data engineering</h3>
+                    <ul>
+                        <li>ETL pipelines and automation</li>
+                        <li>PostgreSQL / PostGIS</li>
+                        <li>CLI tools</li>
+                        <li>Git, GitHub, Docker</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Geospatial</h3>
+                    <ul>
+                        <li>ArcGIS Pro, Online, ArcPy</li>
+                        <li>QGIS</li>
+                        <li>GeoPandas, Shapely, Rasterio</li>
+                        <li>Remote sensing</li>
+                        <li>Multi-criteria suitability modeling</li>
+                        <li>Electric distribution modeling</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Analysis and ML</h3>
+                    <ul>
+                        <li>Pandas, NumPy, SciPy</li>
+                        <li>scikit-learn, XGBoost</li>
+                        <li>LLM context data development</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Apps and visualization</h3>
+                    <ul>
+                        <li>Streamlit</li>
+                        <li>Folium / Leaflet</li>
+                        <li>ArcGIS Dashboards</li>
+                        <li>Matplotlib, Seaborn</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="sheet site-footer"></footer>
 </body>
 </html>
